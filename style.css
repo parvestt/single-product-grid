@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap');
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --yellow: hsl(71, 73%, 54%);
+    --gray: hsl(204, 43%, 93%);
+    --blue: hsl(218, 22%, 67%);
+    --white: hsl(0, 0%, 100%)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background: var(--gray);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.pricing__card {
+    background: var(--white);
+    width: calc(100vw - 40px);
+    max-width: 640px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px hsl(207, 45%, 82%);
+}
+
+.pricing__details {
+    padding: 45px;
+}
+
+.pricing__title {
+    font-size: 24px;
+    color: var(--cyan);
+    margin-bottom: 20px;
+}
+
+.pricing__subtitle {
+    font-size: 18px;
+    color: var(--yellow);
+    margin-bottom: 15px;
+}
+
+.pricing__description {
+    color: var(--blue);
+    line-height: 1.6;
+}
+
+.pricing__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pricing__content h3 {
+    color: var(--white);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.pricing__subscription {
+    background: var(--cyan);
+    padding: 45px;
+}
+
+.pricing__price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pricing__price .price {
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.pricing__price .month {
+    color: hsla(0, 0%, 100%, .7);
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+.pricing__subscription p {
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.pricing__btn {
+    color: #fff;
+    background: var(--yellow);
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px #27A29F;
+}
+
+.pricing__benefits {
+    background: hsl(179, 47%, 52%);
+    padding: 45px;
+}
+
+.pricing__list {
+    list-style: none;
+}
+
+.pricing__list li {
+    color: hsla(0, 0%, 100%, .8);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.pricing__list li:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+@media screen and (max-width: 700px) {
+    .pricing__details {
+        padding: 30px 25px;
+    }
+    .pricing__subscription,
+    .pricing__benefits {
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .pricing__card {
+        border-radius: 5px;
+    }
+    .pricing__title {
+        font-size: 20px;
+    }
+    .pricing__subtitle {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .pricing__description {
+        font-size: 14px;
+    }
+    .pricing__content {
+        grid-template-columns: 1fr;
+    }
+}
